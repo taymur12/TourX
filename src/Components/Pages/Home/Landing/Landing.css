@@ -1,0 +1,10 @@
+
+.img-caro{
+    height:700px;
+}
+
+@media screen and (max-width: 680px) {
+    .img-caro{
+        height:300px;
+    }
+  }
