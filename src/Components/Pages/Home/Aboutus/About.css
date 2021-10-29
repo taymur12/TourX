@@ -1,0 +1,34 @@
+.imgabout{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 10px;
+}
+
+.descriptionAbout{
+    margin: 80px 5px;
+}
+
+
+.container-about{
+    background-color: rgba(211, 211, 211, 0.705);
+    padding: 40px 0px 20px 0px;
+}
+
+
+@media screen and (max-width: 680px) {
+    .descriptionAbout{
+        margin: 10px;
+    }
+    .imgabout{
+        width: 100%;
+    }
+    .container-about{
+        border: 1px solid lightskyblue;
+        background-color: rgba(135, 206, 250, 0.5);
+        padding: 10px 0px 20px 0px;
+        
+    }
+  }
