@@ -1,0 +1,18 @@
+.form-main{
+    margin: 90px 10px 40px 10px;
+}
+
+.form-Container{
+    width: 40%;
+}
+
+.btn-signin{
+    border: 1px solid lightskyblue;
+    padding: 10px;
+}
+
+@media screen and (max-width: 680px) {
+    .form-Container{
+        width: 100%;
+    }
+  }

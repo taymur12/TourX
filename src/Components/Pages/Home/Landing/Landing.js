@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button, Carousel, Container } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import cover1 from '../../../images/back/back3.jpg'
 import cover2 from '../../../images/back/back2.jpg'
-import cover3 from '../../../images/back/back1.jpg'
+
 import './Landing.css'
 
 const Landing = () => {

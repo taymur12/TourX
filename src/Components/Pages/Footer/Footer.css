@@ -1,0 +1,16 @@
+.footer-main{
+    background-color: rgb(25,44,83);
+    padding: 50px;
+}
+
+.footerItem{
+    display: flex;
+    flex-direction: column;
+   
+}
+.footer-item{
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: white;
+
+}
