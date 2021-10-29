@@ -6,12 +6,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Page404 from './Components/Pages/NotFound/Page404';
 import Footer from './Components/Pages/Footer/Footer';
 import Login from './Components/Pages/Login/Login';
+import AuthProvider from './Components/ContextApi/AuthProvider';
 
 
 
 function App() {
   return (
     <div>
+      <AuthProvider>
       <Router>
       <Header></Header>
       <Switch>
@@ -32,6 +34,7 @@ function App() {
       <Footer></Footer>
       </Router>
       
+      </AuthProvider>
     </div>
   );
 }

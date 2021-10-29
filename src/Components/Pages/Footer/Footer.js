@@ -9,8 +9,8 @@ const Footer = () => {
             <Row>
             <Col xs={12} md={4}>
               <p className='text-light'>Phone: +0123 456 987</p>
-              <p className='text-light'>Email: +0123 456 987</p>
-              <p className='text-light'>Open: +0123 456 987</p>
+              <p className='text-light'>Email: tourx@gmail.com</p>
+              <p className='text-light'>Open: Sunday To Friday (9am-4pm)</p>
             </Col>
             <Col xs={12} md={4}>
               <div className='footerItem'>
