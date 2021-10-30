@@ -9,6 +9,7 @@ import Login from './Components/Pages/Login/Login';
 import AuthProvider from './Components/ContextApi/AuthProvider';
 import BookingDetails from './Components/Pages/BookingDetails/BookingDetails';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import MyOrders from './Components/Pages/MyOrders/MyOrders';
 
 
 
@@ -25,6 +26,9 @@ function App() {
         <Route path="/home">
         <Home></Home>
         </Route>
+        <PrivateRoute path="/myorders">
+          <MyOrders></MyOrders>
+        </PrivateRoute>
         <Route path="/login">
        <Login></Login>
         </Route>

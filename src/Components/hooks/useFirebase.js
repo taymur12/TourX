@@ -9,6 +9,8 @@ initializeAuthentication();
 const FirebaseAuth = () =>{
     const [user, setUser] = useState({})
     const [error, seterror] = useState('')
+    const [isLoading, setLoading] = useState(true)
+
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
     
@@ -21,6 +23,9 @@ const FirebaseAuth = () =>{
         .catch(error=>{
             seterror(error.message)
         })
+        .finally(()=>{
+            setLoading(false);
+        })
     }
 
     useEffect(()=>{
@@ -31,6 +36,7 @@ const FirebaseAuth = () =>{
             else{
                 setUser('')
             }
+            setLoading(false)
         })
     },[])
      //Logout
@@ -38,11 +44,13 @@ const FirebaseAuth = () =>{
         signOut(auth).then(()=>{
             setUser({})
         })
+        .finally(()=> setLoading(false))
         .catch(error=>{
             seterror(error.message)
         })
+       
     }
-    return {user, error, signinWithGoogle, logout}
+    return {user, error, signinWithGoogle, logout, isLoading}
 }
 
 export default FirebaseAuth;

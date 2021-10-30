@@ -6,6 +6,10 @@
   
 }
 
+.myOrderItem{
+    text-decoration: none;
+    color: black;
+}
 .nav-main{
     border-bottom: 1px solid lightgray;
 }
