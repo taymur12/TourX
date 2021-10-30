@@ -1,0 +1,21 @@
+.bg-details{
+    border: 1px solid lightgray;
+    background-color: rgba(135, 206, 250, 0.404);
+    margin: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 680px) {
+    .bg-details{
+        margin: 0px 10px 10px 10px;
+}
+    .img-width{
+        width: 100%;
+    }
+  }

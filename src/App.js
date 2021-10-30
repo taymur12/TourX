@@ -7,6 +7,8 @@ import Page404 from './Components/Pages/NotFound/Page404';
 import Footer from './Components/Pages/Footer/Footer';
 import Login from './Components/Pages/Login/Login';
 import AuthProvider from './Components/ContextApi/AuthProvider';
+import BookingDetails from './Components/Pages/BookingDetails/BookingDetails';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 
@@ -26,7 +28,9 @@ function App() {
         <Route path="/login">
        <Login></Login>
         </Route>
-        
+        <PrivateRoute path="/book/:serviceId">
+          <BookingDetails></BookingDetails>
+        </PrivateRoute>
         <Route path="*">
           <Page404></Page404>
         </Route>
