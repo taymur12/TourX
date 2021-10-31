@@ -10,6 +10,7 @@ import AuthProvider from './Components/ContextApi/AuthProvider';
 import BookingDetails from './Components/Pages/BookingDetails/BookingDetails';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import MyOrders from './Components/Pages/MyOrders/MyOrders';
+import ManageAllOrder from './Components/Pages/ManageAllOrder/ManageAllOrder';
 
 
 
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <PrivateRoute path="/book/:serviceId">
           <BookingDetails></BookingDetails>
+        </PrivateRoute>
+        <PrivateRoute path="/manageorder">
+          <ManageAllOrder></ManageAllOrder>
         </PrivateRoute>
         <Route path="*">
           <Page404></Page404>

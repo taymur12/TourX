@@ -33,6 +33,7 @@ const Header = () => {
                 <Dropdown.Item href="#/action-2">{user.email && <span>{user.displayName}</span>}</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">Profile</Dropdown.Item>
                 <Dropdown.Item>{user.email? <Link className='myOrderItem' to="/myorders">My Orders</Link>: <NavLink className="nav-item" activeStyle={activeStyle} to="/login">Login</NavLink>}</Dropdown.Item>
+                <Dropdown.Item>{user.email? <Link className='myOrderItem' to="/manageorder">Manage Orders</Link>: <NavLink className="nav-item" activeStyle={activeStyle} to="/login">Login</NavLink>}</Dropdown.Item>
                   <Dropdown.Item>{
                     user.email?  <p onClick={logout}>Logout</p> : <NavLink className="nav-item" activeStyle={activeStyle} to="/login">Login</NavLink>
                     }</Dropdown.Item>
