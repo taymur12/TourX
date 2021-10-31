@@ -12,6 +12,8 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import MyOrders from './Components/Pages/MyOrders/MyOrders';
 import ManageAllOrder from './Components/Pages/ManageAllOrder/ManageAllOrder';
 import AddNew from './Components/Pages/AddNew/AddNew';
+import About from './Components/Pages/About/About';
+import Contact from './Components/Pages/Contact/Contact';
 
 
 
@@ -27,6 +29,12 @@ function App() {
         </Route>
         <Route path="/home">
         <Home></Home>
+        </Route>
+        <Route path="/about">
+          <About></About>
+        </Route>
+        <Route path="/contact">
+          <Contact></Contact>
         </Route>
         <PrivateRoute path="/myorders">
           <MyOrders></MyOrders>
