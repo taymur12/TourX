@@ -7,7 +7,7 @@ const Myorder = (props) => {
     const {Name,Email,_id,price}= props.allorder
     
     const deleteBtnHandler = id =>{
-        const url = `http://localhost:5000/myorder/${id}`
+        const url = `https://hidden-stream-36360.herokuapp.com/myorder/${id}`
         fetch(url, {
             method: 'DELETE'
         })

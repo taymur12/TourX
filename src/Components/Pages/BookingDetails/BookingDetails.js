@@ -4,15 +4,17 @@ import { useParams } from 'react-router-dom';
 import './BookingDetails.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios'
+import useAuth from '../../hooks/useAuth';
 
 
 
 const BookingDetails = () => {
     const [books, setBooks] = useState([])
     const { serviceId } = useParams()
+    const {user} = useAuth()
     useEffect(() => {
 
-        const url = `http://localhost:5000/service`
+        const url = `https://hidden-stream-36360.herokuapp.com/service`
         fetch(url)
             .then(res => res.json())
             .then(data => setBooks(data))
@@ -21,7 +23,7 @@ const BookingDetails = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/placeorder', data)
+        axios.post('https://hidden-stream-36360.herokuapp.com/placeorder', data)
         .then(res=>{
             alert('Thank you for order')
             reset()
@@ -49,9 +51,9 @@ const BookingDetails = () => {
             <div className='form-main'>
             <h4 className='mb-2 text-info'>Place Your Order</h4>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className='d-block w-100 p-2 mb-3' {...register("Name", { required: true})} placeholder='Name' />
+                    <input className='d-block w-100 p-2 mb-3' defaultValue={user.displayName} {...register("Name", { required: true})} placeholder='Name' />
                     
-                    <input className='d-block w-100 p-2 mb-3' {...register("Email", { required: true})} placeholder='Email' />
+                    <input className='d-block w-100 p-2 mb-3' defaultValue={user.email} {...register("Email", { required: true})} placeholder='Email' />
                     
                     <input className='d-block w-100 p-2 mb-3' defaultValue={foundData?.title} {...register("title", { required: true})} placeholder='Title' />
                    

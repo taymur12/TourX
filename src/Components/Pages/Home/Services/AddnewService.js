@@ -1,13 +1,12 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-const Service = (props) => {
-    console.log(props.allitem)
-    const {id, price, imgs, title, description,day } = props.allitem
+
+const AddnewService = (props) => {
+    const {imgs, title, description, price, day} = props.allitems
     return (
         <div>
-            <Col>
+             <Col>
                 <Card>
                     <Card.Img variant="top" src={imgs} />
                     <Card.Body>
@@ -20,12 +19,12 @@ const Service = (props) => {
                             <p className='price'>{price}/<span>Per Person</span></p>
                         </div>
                     </Card.Body>
-                    <Link to={`/book/${id}`}><Button className='w-100'>Booking Now</Button></Link>
+                   <Button className='w-100' disabled>Booking Now</Button>
+                   
                 </Card>
             </Col>
-            
         </div>
     );
 };
 
-export default Service;
+export default AddnewService;

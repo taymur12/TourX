@@ -21,6 +21,8 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
               <NavLink className="nav-item" activeStyle={activeStyle} to="/home">Home</NavLink>
+              <NavLink className="nav-item" activeStyle={activeStyle} to="/about">About</NavLink>
+              <NavLink className="nav-item" activeStyle={activeStyle} to="/contact">Contact</NavLink>
 
               
               <Dropdown>
@@ -34,6 +36,7 @@ const Header = () => {
                 <Dropdown.Item href="#/action-3">Profile</Dropdown.Item>
                 <Dropdown.Item>{user.email? <Link className='myOrderItem' to="/myorders">My Orders</Link>: <NavLink className="nav-item" activeStyle={activeStyle} to="/login">Login</NavLink>}</Dropdown.Item>
                 <Dropdown.Item>{user.email? <Link className='myOrderItem' to="/manageorder">Manage Orders</Link>: <NavLink className="nav-item" activeStyle={activeStyle} to="/login">Login</NavLink>}</Dropdown.Item>
+                <Dropdown.Item>{user.email? <Link className='myOrderItem' to="/addnew">Add New Service</Link>: <NavLink className="nav-item" activeStyle={activeStyle} to="/login">Login</NavLink>}</Dropdown.Item>
                   <Dropdown.Item>{
                     user.email?  <p onClick={logout}>Logout</p> : <NavLink className="nav-item" activeStyle={activeStyle} to="/login">Login</NavLink>
                     }</Dropdown.Item>

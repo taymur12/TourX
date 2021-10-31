@@ -5,13 +5,13 @@ const ManageAllOrder = () => {
     const [manage, setManage] = useState([])
     
     useEffect(() => {
-        fetch('http://localhost:5000/manageorder')
+        fetch('https://hidden-stream-36360.herokuapp.com/manageorder')
             .then(res => res.json())
             .then(data => setManage(data))
     }, [])
 
     const manageBtnHandler = id =>{
-        const url = `http://localhost:5000/manageorder/${id}`
+        const url = `https://hidden-stream-36360.herokuapp.com/manageorder/${id}`
         fetch(url, {
             method: 'DELETE'
         })

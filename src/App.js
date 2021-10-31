@@ -11,6 +11,7 @@ import BookingDetails from './Components/Pages/BookingDetails/BookingDetails';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import MyOrders from './Components/Pages/MyOrders/MyOrders';
 import ManageAllOrder from './Components/Pages/ManageAllOrder/ManageAllOrder';
+import AddNew from './Components/Pages/AddNew/AddNew';
 
 
 
@@ -38,6 +39,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute path="/manageorder">
           <ManageAllOrder></ManageAllOrder>
+        </PrivateRoute>
+        <PrivateRoute path="/addnew">
+          <AddNew></AddNew>
         </PrivateRoute>
         <Route path="*">
           <Page404></Page404>

@@ -1,11 +1,24 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Login.css'
 
 const Login = () => {
    
     const {signinWithGoogle} = useAuth()
+    const location = useLocation()
+    const history = useHistory()
+    const redirect_uri = location.state?.from || '/home'
+
+    const handleGoogleLogin = () =>{
+        signinWithGoogle()
+        .then(result =>{
+            history.push(redirect_uri)
+        })
+    }
+
     return (
         <div className='form-main '>
             <Form className='form-Container mx-auto'>
@@ -29,7 +42,7 @@ const Login = () => {
                 </Button>
             </Form>
             <div className='mt-4'>
-                <button onClick={signinWithGoogle} className='mx-auto d-block btn-signin'> Sign In With Google</button>
+                <button onClick={handleGoogleLogin} className='mx-auto d-block btn-signin'> Sign In With Google</button>
             </div>
         </div>
     );

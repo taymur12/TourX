@@ -15,11 +15,11 @@ const FirebaseAuth = () =>{
     const auth = getAuth();
     
     const signinWithGoogle = () =>{
-        signInWithPopup(auth, googleProvider)
-        .then(result=>{
-            const user = result.user;
-            setUser(user)
-        })
+       return signInWithPopup(auth, googleProvider)
+        // .then(result=>{
+        //     const user = result.user;
+        //     setUser(user)
+        // })
         .catch(error=>{
             seterror(error.message)
         })
