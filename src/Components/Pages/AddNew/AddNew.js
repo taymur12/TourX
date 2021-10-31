@@ -7,7 +7,7 @@ const AddNew = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/addnew', data)
+        axios.post('https://hidden-stream-36360.herokuapp.com/addnew', data)
             .then(res => {
                 alert('New Service Add successfully into Homepage')
                 reset()

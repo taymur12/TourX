@@ -2,12 +2,14 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Footer.css'
+import footerimg from '../../images/icons/download.png'
 
 const Footer = () => {
     return (
         <div className='footer-main'>
             <Row>
             <Col xs={12} md={4}>
+              <img className='pb-3' src={footerimg} alt="" />
               <p className='text-light'>Phone: +0123 456 987</p>
               <p className='text-light'>Email: tourx@gmail.com</p>
               <p className='text-light'>Open: Sunday To Friday (9am-4pm)</p>

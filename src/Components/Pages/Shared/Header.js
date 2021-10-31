@@ -3,6 +3,8 @@ import { Container, Dropdown, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Header.css'
+import headerimg from '../../images/icons/download.png'
+
 
 const Header = () => {
   
@@ -16,7 +18,8 @@ const Header = () => {
     <div>
       <Navbar className='nav-main' bg="light" expand="lg" fixed="top">
         <Container>
-          <Navbar.Brand href="#home">TourX</Navbar.Brand>
+          <Link to="/home"><img style={{marginTop:'-3px'}} width={110} src={headerimg} alt="" /></Link>
+          {/* <Navbar.Brand href="#home">TourX</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">

@@ -14,7 +14,7 @@ const Services = () => {
     },[])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/addnewservice')
+        fetch('https://hidden-stream-36360.herokuapp.com/addnewservice')
         .then(res=>res.json())
         .then(data=> setAdd(data))
     },[])
