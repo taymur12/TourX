@@ -1,8 +1,10 @@
-TourX is the fully dynamic and functional. There are several feature which works dynamic. which thisgs use in website is discuss below
+TourX is fully dynamic and functional. Several features work dynamic. what technologies are used in the website is discussed below 
 </br>
-<li>Use react library </li>
-<li>Using mongodb for server side </li>
-<li>Use react route  </li>
-<li>Using firebase for login system  </li>
-<li>Use firebase for hosting as well </li>
-<li>Use hiroku for live server data </li>
+<li>Used react library </li>
+<li>Used mongodb for server side </li>
+<li>Used react route  </li>
+<li>Used firebase for login system  </li>
+<li>Used firebase for hosting as well </li>
+<li>Used hiroku for live server data </li>
+
+Here is the live site link https://tourx-7cf43.web.app/
